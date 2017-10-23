@@ -24,7 +24,10 @@ public class Client
             PrintWriter out = new PrintWriter(s.getOutputStream(), true);
 			
 			while(true){
+				
+				System.out.println(in.readLine());
 				out.println(sc.nextLine());
+				
 			}
 		} catch (IOException ex)
 		{

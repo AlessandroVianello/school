@@ -1,6 +1,8 @@
 package chattcp;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.Executors;
@@ -16,14 +18,16 @@ public class Server
 		try
 		{
 			ServerSocket server = new ServerSocket(porta);
+			BufferedReader in;
 			Socket client;
 			ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newCachedThreadPool();
-
 			while (true)
 			{
 				client = server.accept();
-				SQLHelper help=new SQLHelper(client);
-				executor.execute(help);
+				executor.execute(new Execute(client));
+				//SQLHelper help=new SQLHelper(client);
+
+				
 			}
 		} catch (IOException ex)
 		{
