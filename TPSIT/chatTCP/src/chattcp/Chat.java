@@ -4,20 +4,18 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Chat
 {
-	public LinkedList<Socket> list = new LinkedList<Socket>();
+	public List<Socket> list = new LinkedList<Socket>();
 	PrintWriter out;
 
-	public void notify(String s, Socket socket)
+	public synchronized void notify(String s, Socket socket)
 	{
-		if (s.equalsIgnoreCase("Fine chat"))
-		{
-			this.remove(socket);
-		}
+		System.out.println("prova");
 		for (int i = 0; i < list.size(); i++)
 		{
 			if (list.get(i) != socket)
@@ -25,8 +23,9 @@ public class Chat
 
 				try
 				{
-					out = new PrintWriter(list.get(i).getOutputStream());
+					out = new PrintWriter(list.get(i).getOutputStream(),true);
 					out.println(s);
+					System.out.println("inviato");
 
 				} catch (IOException ex)
 				{
@@ -38,12 +37,12 @@ public class Chat
 
 	
 
-	public void add(Socket s)
+	public synchronized void add(Socket s)
 	{
 		list.add(s);
 	}
 
-	public void remove(Socket s)
+	public synchronized void remove(Socket s)
 	{
 		for (int i = 0; i < list.size(); i++)
 		{
@@ -54,7 +53,7 @@ public class Chat
 		}
 	}
 
-	public Socket getSocket(Socket s)
+	public synchronized Socket getSocket(Socket s)
 	{
 		Socket so = s;
 		for (int i = 0; i < list.size(); i++)

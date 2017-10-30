@@ -27,7 +27,6 @@ public class Client
 				
 				System.out.println(in.readLine());
 				out.println(sc.nextLine());
-				
 			}
 		} catch (IOException ex)
 		{
