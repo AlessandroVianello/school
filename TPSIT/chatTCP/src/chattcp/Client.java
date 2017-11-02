@@ -18,22 +18,20 @@ public class Client
 	{
 		int porta = 9999;
 		String host = "localhost";
-		Scanner sc = new Scanner(System.in);
+		//Scanner sc = new Scanner(System.in);
 		try
 		{
 			Socket s = new Socket(host, porta);
 			ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newCachedThreadPool();
-			BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
-			PrintWriter out = new PrintWriter(s.getOutputStream(), true);
-			Listen listen = new Listen(in);
-			Write write = new Write(out);
+			Listen listen = new Listen(s);
+			Write write = new Write(s);
 
 			executor.execute(listen);
 			executor.execute(write);
 
 			/*while (true)
 			{
-
+			
 				System.out.println(in.readLine());
 				out.println(sc.nextLine());
 			}*/
@@ -49,9 +47,15 @@ class Listen implements Runnable
 {
 	BufferedReader in;
 
-	public Listen(BufferedReader in)
+	public Listen(Socket s)
 	{
-		this.in = in;
+		try
+		{
+			in = new BufferedReader(new InputStreamReader(s.getInputStream()));
+		} catch (IOException ex)
+		{
+			Logger.getLogger(Listen.class.getName()).log(Level.SEVERE, null, ex);
+		}
 	}
 
 	@Override
@@ -75,9 +79,15 @@ class Write implements Runnable
 	PrintWriter out;
 	Scanner sc = new Scanner(System.in);
 
-	public Write(PrintWriter out)
+	public Write(Socket s)
 	{
-		this.out = out;
+		try
+		{
+			out = new PrintWriter(s.getOutputStream(), true);
+		} catch (IOException ex)
+		{
+			Logger.getLogger(Write.class.getName()).log(Level.SEVERE, null, ex);
+		}
 	}
 
 	@Override

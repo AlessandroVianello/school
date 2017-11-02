@@ -44,6 +44,7 @@ public class Execute implements Runnable
 			try
 			{
 				mes = in.readLine();
+				System.out.println("passato");
 				chat.notify(mes, s);
 			} catch (IOException ex)
 			{
