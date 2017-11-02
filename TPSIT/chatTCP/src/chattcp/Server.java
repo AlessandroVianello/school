@@ -18,16 +18,16 @@ public class Server
 		{
 			ServerSocket server = new ServerSocket(porta);
 			Socket client;
-			Chat chat=new Chat();
+			Chat chat = new Chat();
 			ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newCachedThreadPool();
-			
+
 			while (true)
 			{
 				client = server.accept();
-				executor.execute(new Execute(client,chat));
+				chat.add(client);
+				executor.execute(new Execute(client, chat));
 				//SQLHelper help=new SQLHelper(client);
 
-				
 			}
 		} catch (IOException ex)
 		{

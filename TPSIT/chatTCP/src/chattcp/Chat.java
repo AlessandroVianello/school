@@ -23,7 +23,7 @@ public class Chat
 
 				try
 				{
-					out = new PrintWriter(list.get(i).getOutputStream(),true);
+					out = new PrintWriter(list.get(i).getOutputStream(), true);
 					out.println(s);
 					System.out.println("inviato");
 
@@ -34,8 +34,6 @@ public class Chat
 			}
 		}
 	}
-
-	
 
 	public synchronized void add(Socket s)
 	{

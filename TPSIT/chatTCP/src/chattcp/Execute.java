@@ -10,21 +10,20 @@ import java.util.logging.Logger;
 
 public class Execute implements Runnable
 {
-	Chat chat = new Chat();
+	Chat chat;
 	BufferedReader in;
 	PrintWriter out;
 	String mes;
 	Socket s;
 
-	public Execute(Socket s,Chat chat)
+	public Execute(Socket s, Chat chat)
 	{
 		this.s = s;
-		this.chat=chat;
-		this.chat.add(this.s);
+		this.chat = chat;
 		try
 		{
 			in = new BufferedReader(new InputStreamReader(chat.getSocket(this.s).getInputStream()));
-			out=new PrintWriter(chat.getSocket(this.s).getOutputStream(),true);
+			out = new PrintWriter(chat.getSocket(this.s).getOutputStream(), true);
 		} catch (IOException ex)
 		{
 			Logger.getLogger(Execute.class.getName()).log(Level.SEVERE, null, ex);
@@ -32,7 +31,7 @@ public class Execute implements Runnable
 	}
 
 	@Override
-	public void run()
+	public synchronized void run()
 	{
 		boolean x = false;
 		while (true)
