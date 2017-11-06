@@ -4,6 +4,7 @@ import java.io.File;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
@@ -11,8 +12,11 @@ import java.util.logging.Logger;
 
 public class DatabaseSQL
 {
-	public static void newDatabase(String nameFile)
+	String nameFile;
+
+	public void newDatabase(String nameFile)
 	{
+		this.nameFile = nameFile;
 		File file = new File("C:\\Users\\alessandro.vianello.LAP\\Desktop\\Personal\\TPSIT\\chatTCP");//cambiare per ogni computer
 		if (!file.exists())
 		{
@@ -25,7 +29,7 @@ public class DatabaseSQL
 			}
 		}
 
-		String url = "jdbc:sqlite:C:\\Users\\alessandro.vianello.LAP\\Desktop\\Personal\\TPSIT\\chatTCP\\" + nameFile;//cambiare per ogni computer
+		String url = "jdbc:sqlite:C:\\Users\\alessandro.vianello.LAP\\Desktop\\Personal\\TPSIT\\chatTCP\\" + this.nameFile;//cambiare per ogni computer
 
 		try (Connection conn = DriverManager.getConnection(url))
 		{
@@ -43,16 +47,16 @@ public class DatabaseSQL
 
 	}
 
-	public static void createTable(String nameFile)
+	public void createTable(String nameFile)
 	{
-
+		this.nameFile = nameFile;
 		Connection conn = null;
 		Statement stmt = null;
 
 		try
 		{
 			Class.forName("org.sqlite.JDBC");
-			conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\alessandro.vianello.LAP\\Desktop\\Personal\\TPSIT\\chatTCP\\" + nameFile);//cambiare per ogni computer
+			conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\alessandro.vianello.LAP\\Desktop\\Personal\\TPSIT\\chatTCP\\" + this.nameFile);//cambiare per ogni computer
 			System.out.println("Opened database successfully");
 
 			stmt = conn.createStatement();
@@ -71,5 +75,36 @@ public class DatabaseSQL
 			Logger.getLogger(DatabaseSQL.class.getName()).log(Level.SEVERE, null, ex);
 		}
 		System.out.println("Table created successufully");
+	}
+
+	public void addNewUser(String username, String password,String nameFile)
+	{
+		String credentials = "INSERT INTO dati VALUES(?,?,?);";
+		this.nameFile=nameFile;
+
+		try (Connection conn = DatabaseSQL.connect(this.nameFile);
+				PreparedStatement pstmt = conn.prepareStatement(credentials))
+		{
+			pstmt.setString(2, username);
+			pstmt.setString(3, password);
+			pstmt.executeUpdate();
+		} catch (SQLException ex)
+		{
+		}
+
+	}
+
+	private static  Connection connect(String nameFile)
+	{
+		//SQLite connection string 
+		String url = "jdbc:sqlite:C:\\Users\\alessandro.vianello.LAP\\Desktop\\Personal\\TPSIT\\chatTCP\\" + nameFile;
+		Connection conn = null;
+		try
+		{
+			conn = DriverManager.getConnection(url);
+		} catch (SQLException ex)
+		{
+		}
+		return conn;
 	}
 }
