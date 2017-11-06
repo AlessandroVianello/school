@@ -19,13 +19,15 @@ public class Server
 			Socket client;
 			Chat chat = new Chat();
 			ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newCachedThreadPool();
+			DatabaseSQL database=new DatabaseSQL();
+			database.newDatabase("database.sqlite3");
+			database.createTable("database.sqlite3");
 
 			while (true)
 			{
 				client = server.accept();
 				chat.add(client);
 				executor.execute(new Execute(client, chat));
-				//SQLHelper help=new SQLHelper(client);
 
 			}
 		} catch (IOException ex)
