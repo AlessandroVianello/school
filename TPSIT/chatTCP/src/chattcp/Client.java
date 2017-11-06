@@ -95,7 +95,7 @@ class Write implements Runnable
 	{
 		while (true)
 		{
-			out.write(sc.nextLine());
+			out.println(sc.nextLine());
 		}
 	}
 }

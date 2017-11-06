@@ -2,10 +2,10 @@ package chattcp;
 
 import java.net.Socket;
 
-public class SQLHelper implements Runnable
+public class SQL implements Runnable
 {
 	Socket client;
-	public SQLHelper(Socket client){
+	public SQL(Socket client){
 		this.client=client;
 	}
 
