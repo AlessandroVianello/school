@@ -77,13 +77,13 @@ public class DatabaseSQL
 		System.out.println("Table created successufully");
 	}
 
-	public void addNewUser(String username, String password,String nameFile)
+	public void addUser(String username, String password,String nameFile)
 	{
-		String credentials = "INSERT INTO dati VALUES(?,?,?);";
+		String credenziali = "INSERT INTO dati VALUES(?,?,?);";
 		this.nameFile=nameFile;
 
 		try (Connection conn = DatabaseSQL.connect(this.nameFile);
-				PreparedStatement pstmt = conn.prepareStatement(credentials))
+				PreparedStatement pstmt = conn.prepareStatement(credenziali))
 		{
 			pstmt.setString(2, username);
 			pstmt.setString(3, password);

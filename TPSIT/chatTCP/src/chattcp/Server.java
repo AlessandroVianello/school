@@ -24,27 +24,37 @@ public class Server
 			boolean register = false;
 			PrintWriter out;
 			BufferedReader in;
-			Integer scelta;
+			String scelta;
 			ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newCachedThreadPool();
 			DatabaseSQL database = new DatabaseSQL();
-			database.newDatabase("database.sqlite3");
-			database.createTable("database.sqlite3");
+			database.newDatabase("database.sqlite");
+			database.createTable("database.sqlite");
 
 			while (true)
 			{
 				client = server.accept();
 				chat.add(client);
-				out=new PrintWriter(client.getOutputStream(), true);
+				out = new PrintWriter(client.getOutputStream(), true);
 				in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 				while (!register)
 				{
-					out.println("1) Registrazione");
-					out.println("2) Accedi");
-					out.print("La tua scelta: ");
-					scelta=in.read();
+					out.println("1) Registrazione\n2) Accedi");
+					//out.println("2) Accedi");
+					//out.print("La tua scelta: ");
+					scelta = in.readLine();
 					
-					if(scelta==1){
-						
+					if (scelta.equalsIgnoreCase("1"))
+					{
+						out.println("Inserire username.");
+						String username = in.readLine();
+						out.println("Inserire password.");
+						String password = in.readLine();
+						database.addUser(username, password, "database.sqlite");
+					}
+
+					if (scelta.equalsIgnoreCase("2"))
+					{
+
 					}
 				}
 				executor.execute(new Execute(client, chat));
