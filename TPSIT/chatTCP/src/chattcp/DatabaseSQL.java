@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
@@ -62,8 +63,8 @@ public class DatabaseSQL
 			stmt = conn.createStatement();
 			String sql = "CREATE TABLE IF NOT EXISTS dati(\n "
 					+ "id INTEGER  PRIMARY KEY,\n"
-					+ "username      TEXT        NOT NULL,\n"
-					+ "password      TEXT        NOT NULL\n"
+					+ "username      TEXT        NOT NULL		UNIQUE,\n"
+					+ "password      TEXT        NOT NULL		UNIQUE\n"
 					+ ");";
 			stmt.executeUpdate(sql);
 
@@ -77,10 +78,10 @@ public class DatabaseSQL
 		System.out.println("Table created successufully");
 	}
 
-	public void addUser(String username, String password,String nameFile)
+	public void addUser(String username, String password, String nameFile)
 	{
 		String credenziali = "INSERT INTO dati VALUES(?,?,?);";
-		this.nameFile=nameFile;
+		this.nameFile = nameFile;
 
 		try (Connection conn = DatabaseSQL.connect(this.nameFile);
 				PreparedStatement pstmt = conn.prepareStatement(credenziali))
@@ -94,7 +95,7 @@ public class DatabaseSQL
 
 	}
 
-	private static  Connection connect(String nameFile)
+	private static Connection connect(String nameFile)
 	{
 		//SQLite connection string 
 		String url = "jdbc:sqlite:C:\\Users\\alessandro.vianello.LAP\\Desktop\\Personal\\TPSIT\\chatTCP\\" + nameFile;
@@ -106,5 +107,36 @@ public class DatabaseSQL
 		{
 		}
 		return conn;
+	}
+
+	public boolean checkInfo(String username, String password, String nameFile)
+	{
+		this.nameFile = nameFile;
+		boolean x = false;
+		try
+		{
+
+			Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\alessandro.vianello.LAP\\Desktop\\Personal\\TPSIT\\chatTCP\\" + this.nameFile);//cambiare per ogni computer
+			Statement statement = conn.createStatement();
+			String check = "SELECT username,password FROM dati ;";
+			try
+			{
+				ResultSet rs = statement.executeQuery(check);
+				String checkUsername = rs.getString("username");
+				String checkPassword = rs.getString("password");
+				if (username.equals(checkUsername) && password.equals(checkPassword))
+				{
+					x = true;
+				}
+			} catch (SQLException ex)
+			{
+				Logger.getLogger(DatabaseSQL.class.getName()).log(Level.SEVERE, null, ex);
+			}
+
+		} catch (SQLException ex)
+		{
+			Logger.getLogger(DatabaseSQL.class.getName()).log(Level.SEVERE, null, ex);
+		}
+		return x;
 	}
 }

@@ -42,7 +42,7 @@ public class Server
 					//out.println("2) Accedi");
 					//out.print("La tua scelta: ");
 					scelta = in.readLine();
-					
+
 					if (scelta.equalsIgnoreCase("1"))
 					{
 						out.println("Inserire username.");
@@ -54,9 +54,21 @@ public class Server
 
 					if (scelta.equalsIgnoreCase("2"))
 					{
-
+						out.println("Inserire username.");
+						String username = in.readLine();
+						out.println("Inserire password.");
+						String password = in.readLine();
+						register = database.checkInfo(username, password, "database.sqlite");
+						if (!register)
+						{
+							out.println("Credenziali errate");
+						} else
+						{
+							out.println("Credenziali accettate");
+						}
 					}
 				}
+				register = false;
 				executor.execute(new Execute(client, chat));
 
 			}
