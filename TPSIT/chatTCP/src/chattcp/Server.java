@@ -8,27 +8,29 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class Server
 {
 	public static void main(String[] args)
 	{
 		int porta = 9999;
+		Socket client = null;
+		DatabaseSQL database=null;
+		String username;
+		String password;
 		try
 		{
 			ServerSocket server = new ServerSocket(porta);
-			Socket client;
+
 			Chat chat = new Chat();
 			boolean register = false;
 			PrintWriter out;
 			BufferedReader in;
 			String scelta;
 			ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newCachedThreadPool();
-			DatabaseSQL database = new DatabaseSQL();
+			database = new DatabaseSQL();
 			database.newDatabase("database.sqlite");
-			database.createTable("database.sqlite");
+			database.createDati("database.sqlite");
 
 			while (true)
 			{
@@ -46,18 +48,19 @@ public class Server
 					if (scelta.equalsIgnoreCase("1"))
 					{
 						out.println("Inserire username.");
-						String username = in.readLine();
+						username = in.readLine();
 						out.println("Inserire password.");
-						String password = in.readLine();
+						password = in.readLine();
 						database.addUser(username, password, "database.sqlite");
+
 					}
 
 					if (scelta.equalsIgnoreCase("2"))
 					{
 						out.println("Inserire username.");
-						String username = in.readLine();
+						username = in.readLine();
 						out.println("Inserire password.");
-						String password = in.readLine();
+						password = in.readLine();
 						register = database.checkInfo(username, password, "database.sqlite");
 						if (!register)
 						{
@@ -74,7 +77,8 @@ public class Server
 			}
 		} catch (IOException ex)
 		{
-			Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+			System.out.println(client.getLocalSocketAddress().toString()+" è uscito");
+			database.setOffline("database.sqlite");
 		}
 	}
 
