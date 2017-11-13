@@ -79,7 +79,7 @@ public class DatabaseSQL
 		}
 		System.out.println("Table created successufully");
 	}
-	
+
 	/*public void createTable(String nameFile, String nameTab)
 	{
 		this.nameFile = nameFile;
@@ -109,12 +109,12 @@ public class DatabaseSQL
 		}
 		System.out.println("Table created successufully");
 	}
-*/
+	 */
 	public void addUser(String username, String password, String nameFile)
 	{
 		String credenziali = "INSERT INTO dati VALUES(?,?,?,?);";
 		this.nameFile = nameFile;
-		Integer online=0;
+		Integer online = 0;
 		try (Connection conn = DatabaseSQL.connect(this.nameFile);
 				PreparedStatement pstmt = conn.prepareStatement(credenziali))
 		{
@@ -164,7 +164,7 @@ public class DatabaseSQL
 					{
 						x = true;
 						rs.close();
-						PreparedStatement online=conn.prepareStatement("UPDATE dati SET online = 1");
+						PreparedStatement online = conn.prepareStatement("UPDATE dati SET online = 1;");
 						online.executeUpdate();
 						online.close();
 					}
@@ -173,7 +173,7 @@ public class DatabaseSQL
 			{
 				Logger.getLogger(DatabaseSQL.class.getName()).log(Level.SEVERE, null, ex);
 			}
-			
+
 			conn.close();
 
 		} catch (SQLException ex)
@@ -182,20 +182,32 @@ public class DatabaseSQL
 		}
 		return x;
 	}
-	
-	public void setOffline(String nameFile){
-		this.nameFile=nameFile;
+
+	public void setOffline(String username, String password, String nameFile)
+	{
+		this.nameFile = nameFile;
 		try
 		{
 			Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\alessandro.vianello.LAP\\Desktop\\Personal\\TPSIT\\chatTCP\\" + this.nameFile);//cambiare per ogni computer
 			Statement statement = conn.createStatement();
 			String check = "SELECT username,password FROM dati ;";
 			ResultSet rs = statement.executeQuery(check);
-			
+			while (rs.next())
+			{
+				String checkUsername = rs.getString("username");
+				String checkPassword = rs.getString("password");
+				if (username.equals(checkUsername) && password.equals(checkPassword))
+				{
+					rs.close();
+					PreparedStatement online=conn.prepareStatement("UPDATE dati SET online = 0;");
+					online.executeUpdate();
+					online.close();
+				}
+			}
+			conn.close();
 		} catch (SQLException ex)
 		{
 			Logger.getLogger(DatabaseSQL.class.getName()).log(Level.SEVERE, null, ex);
 		}
-		
 	}
 }
