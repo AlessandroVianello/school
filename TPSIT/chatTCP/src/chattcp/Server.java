@@ -15,7 +15,7 @@ public class Server
 	{
 		int porta = 9999;
 		Socket client = null;
-		DatabaseSQL database=null;
+		DatabaseSQL database = null;
 		String username;
 		String password;
 		try
@@ -77,9 +77,10 @@ public class Server
 			}
 		} catch (IOException ex)
 		{
-			System.out.println(client.getLocalSocketAddress().toString()+" è uscito");
+			System.out.println(client.getLocalSocketAddress().toString() + " è uscito");
 			database.setOffline("database.sqlite");
 		}
+
 	}
 
 }
