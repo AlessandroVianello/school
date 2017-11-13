@@ -12,6 +12,11 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/*
+link scuola =  jdbc:sqlite:C:\\Users\\alessandro.vianello.LAP\\Desktop\\Personal\\TPSIT\\chatTCP\\NOMEFILE
+link casa =  jdbc:sqlite:C:\\Users\\
+*/
+
 public class DatabaseSQL
 {
 	String nameFile;
