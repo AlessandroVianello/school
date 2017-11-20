@@ -62,7 +62,7 @@ public class Chat {
         for (int i = 0; i < list.size(); i++) {
             try {
                 out = new PrintWriter(list.get(i).getOutputStream(), true);
-                IDsocket=database.printUser(IDsocket, list.get(i));
+                IDsocket=database.printUser("database.sqlite", list.get(i));
                 out.println(IDsocket);
             } catch (IOException ex) {
                 Logger.getLogger(Chat.class.getName()).log(Level.SEVERE, null, ex);

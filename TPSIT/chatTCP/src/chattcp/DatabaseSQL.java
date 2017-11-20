@@ -22,7 +22,7 @@ public class DatabaseSQL {
 
     public void newDatabase(String nameFile) {
         this.nameFile = nameFile;
-        File file = new File("C:\\Users\\alexi\\Desktop\\Personal\\TPSIT\\chatTCP");//cambiare per ogni computer
+        File file = new File("C:\\Users\\alessandro.vianello.LAP\\Desktop\\Personal\\TPSIT\\chatTCP");//cambiare per ogni computer
         if (!file.exists()) {
             if (file.mkdirs()) {
                 System.out.println("Multiple directories are created!");
@@ -31,7 +31,7 @@ public class DatabaseSQL {
             }
         }
 
-        String url = "jdbc:sqlite:C:\\Users\\alexi\\Desktop\\Personal\\TPSIT\\chatTCP\\" + this.nameFile;//cambiare per ogni computer
+        String url = "jdbc:sqlite:C:\\Users\\alessandro.vianello.LAP\\Desktop\\Personal\\TPSIT\\chatTCP\\" + this.nameFile;//cambiare per ogni computer
 
         try (Connection conn = DriverManager.getConnection(url)) {
             if (conn != null) {
@@ -53,7 +53,7 @@ public class DatabaseSQL {
 
         try {
             Class.forName("org.sqlite.JDBC");
-            conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\alexi\\Desktop\\Personal\\TPSIT\\chatTCP\\" + this.nameFile);//cambiare per ogni computer
+            conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\alessandro.vianello.LAP\\Desktop\\Personal\\TPSIT\\chatTCP\\" + this.nameFile);//cambiare per ogni computer
             System.out.println("Opened database successfully");
 
             stmt = conn.createStatement();
@@ -61,7 +61,8 @@ public class DatabaseSQL {
                     + "id INTEGER  PRIMARY KEY,\n"
                     + "username      TEXT        NOT NULL		UNIQUE,\n"
                     + "password      TEXT        NOT NULL,\n"
-                    + "socket		TEXT		\n"
+                    + "socket		 TEXT,\n"
+					+ "status		 TEXT		 NOT NULL\n"
                     + ");";
             stmt.executeUpdate(sql);
 
@@ -104,14 +105,16 @@ public class DatabaseSQL {
 	}
      */
     public void addUser(String username, String password, Socket user, String nameFile) {
-        String credenziali = "INSERT INTO dati VALUES(?,?,?,?);";
+        String credenziali = "INSERT INTO dati VALUES(?,?,?,?,?);";
         this.nameFile = nameFile;
         String IDsocket = user.getLocalAddress().toString();
+		String online = "offline";
         try (Connection conn = DatabaseSQL.connect(this.nameFile);
                 PreparedStatement pstmt = conn.prepareStatement(credenziali)) {
             pstmt.setString(2, username);
             pstmt.setString(3, password);
             pstmt.setString(4, IDsocket);
+			pstmt.setString(5, online);
             pstmt.executeUpdate();
             pstmt.close();
             conn.close();
@@ -122,7 +125,7 @@ public class DatabaseSQL {
 
     private static Connection connect(String nameFile) {
         //SQLite connection string 
-        String url = "jdbc:sqlite:C:\\Users\\alexi\\Desktop\\Personal\\TPSIT\\chatTCP\\" + nameFile;
+        String url = "jdbc:sqlite:C:\\Users\\alessandro.vianello.LAP\\Desktop\\Personal\\TPSIT\\chatTCP\\" + nameFile;
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(url);
@@ -135,7 +138,7 @@ public class DatabaseSQL {
         this.nameFile = nameFile;
         boolean x = false;
         try {
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\alexi\\Desktop\\Personal\\TPSIT\\chatTCP\\" + this.nameFile);//cambiare per ogni computer
+            Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\alessandro.vianello.LAP\\Desktop\\Personal\\TPSIT\\chatTCP\\" + this.nameFile);//cambiare per ogni computer
             Statement statement = conn.createStatement();
             String check = "SELECT username,password FROM dati ;";
             ResultSet rs = statement.executeQuery(check);
@@ -146,9 +149,9 @@ public class DatabaseSQL {
                     if (username.equals(checkUsername) && password.equals(checkPassword)) {
                         x = true;
                         rs.close();
-                        PreparedStatement pstmt = conn.prepareStatement("UPDATE dati SET socket = " + socket.getLocalAddress().toString() + ";");
-                        pstmt.executeUpdate();
-                        pstmt.close();
+                        statement.executeUpdate("UPDATE dati SET socket = " + socket.getLocalAddress().toString() + ";");
+						statement.executeUpdate("UPDATE dati SET status = online;");
+						statement.close();
                         //PreparedStatement online = conn.prepareStatement("UPDATE dati SET online = 1;");
                         //online.executeUpdate();
                         //online.close();
@@ -172,9 +175,9 @@ public class DatabaseSQL {
         Statement stmt = null;
         String user = null;
         try {
-            conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\alexi\\Desktop\\Personal\\TPSIT\\chatTCP\\" + this.nameFile);//cambiare per ogni computer
+            conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\alessandro.vianello.LAP\\Desktop\\Personal\\TPSIT\\chatTCP\\" + this.nameFile);//cambiare per ogni computer
             stmt = conn.createStatement();
-            String s = "SELECT username FROM dati WHERE socket =' " + socket.getLocalAddress().toString() + "';";
+            String s = "SELECT username FROM dati WHERE socket ='" + socket.getLocalAddress().toString() + "' AND staus = 'online';";
             ResultSet rs = stmt.executeQuery(s);
             user = rs.getString("username");
             stmt.close();
