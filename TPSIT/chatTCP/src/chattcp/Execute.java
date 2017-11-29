@@ -16,9 +16,11 @@ public class Execute implements Runnable {
     String mes;
     Socket s;
     DatabaseSQL database;
+    String username;
 
-    public Execute(Socket s, Chat chat, DatabaseSQL database) {
+    public Execute(Socket s, String username, Chat chat, DatabaseSQL database) {
         this.s = s;
+        this.username = username;
         this.database = database;
         this.chat = chat;
         try {
@@ -43,12 +45,14 @@ public class Execute implements Runnable {
                 mes = in.readLine();
                 if (mes.equals("!esci")) {
                     s.close();
+                    s=null;
+                    break;
                 } else {
                     System.out.println("passato");
                     chat.notify(mes, s);
                 }
             } catch (IOException ex) {
-                Logger.getLogger(Execute.class.getName()).log(Level.SEVERE, null, ex);
+                
             }
         }
     }

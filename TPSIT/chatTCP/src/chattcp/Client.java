@@ -16,22 +16,17 @@ public class Client {
     public static void main(String[] args) {
         int porta = 9999;
         String host = "localhost";
+        Scanner sc = new Scanner(System.in);
         //Scanner sc = new Scanner(System.in);
         try {
             Socket s = new Socket(host, porta);
             ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newCachedThreadPool();
+            String username = "Me";
             Listen listen = new Listen(s);
-            Write write = new Write(s);
+            Write write = new Write(s, username);
 
             executor.execute(listen);
             executor.execute(write);
-
-            /*while (true)
-			{
-			
-				System.out.println(in.readLine());
-				out.println(sc.nextLine());
-			}*/
         } catch (IOException ex) {
             Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -66,10 +61,12 @@ class Listen implements Runnable {
 class Write implements Runnable {
 
     PrintWriter out;
+    String username;
     Scanner sc = new Scanner(System.in);
 
-    public Write(Socket s) {
+    public Write(Socket s, String username) {
         try {
+            this.username = username;
             out = new PrintWriter(s.getOutputStream(), true);
         } catch (IOException ex) {
             Logger.getLogger(Write.class.getName()).log(Level.SEVERE, null, ex);
@@ -79,7 +76,9 @@ class Write implements Runnable {
     @Override
     public synchronized void run() {
         while (true) {
-            out.println(sc.nextLine());
+            String s = sc.nextLine();
+            System.out.println(username + ": " + s);
+            out.println(s);
         }
     }
 }

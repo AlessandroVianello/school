@@ -22,7 +22,6 @@ public class Server {
         try {
             ServerSocket server = new ServerSocket(porta);
 
-            
             boolean register = false;
             PrintWriter out;
             BufferedReader in;
@@ -67,18 +66,17 @@ public class Server {
                     }
                 }
                 register = false;
-                executor.execute(new Execute(client, chat, database));
+                executor.execute(new Execute(client, username, chat, database));
 
             }
         } catch (IOException ex) {
-			try
-			{
-				System.out.println(client.getLocalSocketAddress().toString() + " è uscito");
-				client.close();
-			} catch (IOException ex1)
-			{
-				Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex1);
-			}
+            try {
+                System.out.println(client.getLocalSocketAddress().toString() + " è uscito");
+                database.setOffline(username, password, client, "database.sqlite");
+                client.close();
+                client = null;
+            } catch (IOException ex1) {
+            }
         }
 
     }

@@ -5,23 +5,21 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Chat {
 
-    public List<Socket> list = new LinkedList<Socket>();
+    public ArrayList<Socket> list = new ArrayList<Socket>();
     PrintWriter out;
     DatabaseSQL database;
-    
-    public Chat(DatabaseSQL database){
-        this.database=database;
+    public Chat(DatabaseSQL database) {
+        this.database = database;
     }
 
-    /*public synchronized void notify(String s, Socket socket) {
+    public synchronized void notify(String s, Socket socket) {
         System.out.println("prova");
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i) != socket) {
@@ -36,26 +34,24 @@ public class Chat {
                 }
             }
         }
-    }*/
-	public synchronized void notify(String s, Socket socket) {
-		PrintWriter out=null;
-		try
-		{
-			System.out.println("prova");
-			Scanner sc=new Scanner (System.in);
-			boolean x=false;
-			out = new PrintWriter(socket.getOutputStream(), true);
-			out.print("Inserire user per iniziare chat: ");
-			BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-			String user=in.readLine();
-			while(!x){
-				
-			}
-		} catch (IOException ex)
-		{
-			Logger.getLogger(Chat.class.getName()).log(Level.SEVERE, null, ex);
-		} 
     }
+    /*public synchronized void notify(String s, Socket socket) {
+        PrintWriter out = null;
+        try {
+            System.out.println("prova");
+            Scanner sc = new Scanner(System.in);
+            boolean x = false;
+            out = new PrintWriter(socket.getOutputStream(), true);
+            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            out.println("Inserire user per iniziare chat.");
+            String user = in.readLine();
+            while (!x) {
+                
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Chat.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }*/
 
     public synchronized void add(Socket s) {
         list.add(s);
@@ -83,7 +79,7 @@ public class Chat {
         for (Integer i = 0; i < list.size(); i++) {
             try {
                 out = new PrintWriter(list.get(i).getOutputStream(), true);
-                database.printUser("database.sqlite",list.get(i));
+                database.printUser("database.sqlite", list.get(i));
             } catch (IOException ex) {
                 Logger.getLogger(Chat.class.getName()).log(Level.SEVERE, null, ex);
             }
