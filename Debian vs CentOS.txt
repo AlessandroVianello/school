@@ -1,0 +1,15 @@
+CentOS
+OS basato su RHEL;
+stabile e sicuro;
+aggiornamenti meno frequenti, ma le versioni rilasciate sono testate a lungo;
+OS adatto per utenti esperti;
+OS preferito da aziende e agenzie web che sono gia familiari con Linux;
+poca community support e poche tutorials online;
+
+Debian
+versioni stabili di Debian una ogni due anni, quindi è lenta nell'introdurre nuove tecnologie;
+OS con alto numero di pacchetti software (circa 52000);
+Debian è considerato l'OS più stabile degl'altri (perché 2 anni per ogni rilascio);
+Ha una security support;
+OS adatto per utenti esperti;
+OS che permette un alto livello di controllo e personalizzazione sopra la sua configurazione;
