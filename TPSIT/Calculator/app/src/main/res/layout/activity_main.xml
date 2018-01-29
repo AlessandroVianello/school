@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal|center_vertical"
         android:id="@+id/background">
         <TableRow
-            android:layout_width="match_parent">
+            android:gravity="center_horizontal|center_vertical">
 
             <EditText
                 android:id="@+id/editText"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:editable="false"
                 />
         </TableRow>
-        <TableRow>
+        <TableRow
+            android:gravity="center_vertical|center_horizontal">
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/seven"
                 android:text="@string/seven"/>
-                <!--android:onClick="send7"-->
+            <!--android:onClick="send7"-->
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -43,7 +44,8 @@
                 android:id="@+id/minos"
                 android:text="@string/minos"/>
         </TableRow>
-        <TableRow>
+        <TableRow
+            android:gravity="center_horizontal|center_vertical">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -66,7 +68,8 @@
                 android:id="@+id/plus"
                 android:text="@string/plus"/>
         </TableRow>
-        <TableRow>
+        <TableRow
+            android:gravity="center_horizontal|center_vertical">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,7 +91,8 @@
                 android:id="@+id/divide"
                 android:text="@string/divide"/>
         </TableRow>
-        <TableRow>
+        <TableRow
+            android:gravity="center_horizontal|center_vertical">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -112,7 +116,8 @@
                 android:id="@+id/multiply"
                 android:text="@string/multiply"/>
         </TableRow>
-        <TableRow>
+        <TableRow
+            android:gravity="center_horizontal|center_vertical">
             <Button
                 android:clickable="false"/>
             <Button
