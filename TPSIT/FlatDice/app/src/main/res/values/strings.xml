@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FlatDice</string>
+    <string name="frag1_txt">1</string>
+    <string name="frag2_txt">2</string>
+    <string name="frag3_txt">3</string>
+    <string name="frag4_txt">4</string>
+    <string name="frag5_txt">5</string>
+    <string name="frag6_txt">6</string>
+</resources>
