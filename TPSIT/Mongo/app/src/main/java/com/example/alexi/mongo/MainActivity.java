@@ -1,5 +1,4 @@
 package com.example.alexi.mongo;
-
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
@@ -28,7 +27,6 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,7 +40,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.http.GET;
 
-public class LoginActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity{
     private RFService mService;
     ScrollView scrollView;
 
@@ -55,10 +53,10 @@ public class LoginActivity extends AppCompatActivity{
         mService = RFService.retrofit.create(RFService.class);
 
         scrollView = findViewById(R.id.login_form);
-        //scrollView.removeAllViews();
-        /*TextView tv = new TextView(this);
+        scrollView.removeAllViews();
+        TextView tv = new TextView(this);
         tv.setText(getResources().getString(R.string.action_sign_in));
-        scrollView.addView(tv);*/
+        scrollView.addView(tv);
 
 
         Button btn = findViewById(R.id.email_sign_in_button);
@@ -80,9 +78,8 @@ public class LoginActivity extends AppCompatActivity{
 
                 if(response.isSuccessful()) {
                     Log.d("LoginActivity", "onresponse.isSuccessful()");
-                    Toast.makeText(LoginActivity.this, "get response", Toast.LENGTH_SHORT);
+                    Toast.makeText(MainActivity.this, "get response", Toast.LENGTH_SHORT);
                     users = (ArrayList<Embedded>)response.body().getEmbedded();
-                    LoginActivity.this.register_login(users);
 
 
                 } else {
@@ -97,10 +94,6 @@ public class LoginActivity extends AppCompatActivity{
                 showErrorMessage();
             }
         });
-    }
-
-    private void register_login(ArrayList<Embedded>users) {
-
     }
 
     void showErrorMessage(){
