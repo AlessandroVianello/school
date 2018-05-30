@@ -1,5 +1,7 @@
+'use strict';
+
 const mongoose = require('mongoose');
-var uri='mongodb://localhost:27017/node-login';
+
 const Schema = mongoose.Schema;
 
 const userSchema = mongoose.Schema({
@@ -14,6 +16,6 @@ const userSchema = mongoose.Schema({
 });
 
 mongoose.Promise = global.Promise;
-mongoose.createConnection(uri,{server:{poolSize:4}});
+mongoose.connect('mongodb://localhost:27017/node-login');
 
 module.exports = mongoose.model('user', userSchema);

@@ -1,3 +1,5 @@
+'use strict';
+
 const user = require('../models/user');
 const bcrypt = require('bcryptjs');
 const nodemailer = require('nodemailer');
@@ -66,14 +68,20 @@ exports.resetPasswordInit = email =>
 
 		.then(user => {
 
-			const transporter = nodemailer.createTransport('smtps://${config.email}:${config.password}@smtp.gmail.com');
+			const transporter = nodemailer.createTransport(`smtps://${config.email}:${config.password}@smtp.gmail.com`);
 
 			const mailOptions = {
 
-    			from: '"${config.name+}" <${config.email}>',
+    			from: `"${config.name}" <${config.email}>`,
     			to: email,
     			subject: 'Reset Password Request ',
-    			html: 'Hello ${user.name},  Your reset password token is <b>${random}</b>.If you are viewing this mail from a Android Device click this <a href="http://learn2crack/${random}">link</a>. The token is valid for only 2 minutes.Thanks, Anonymous.'
+    			html: `Hello ${user.name},
+
+    			Your reset password token is <b>${random}</b>.
+    			The token is valid for only 2 minutes.
+
+    			Thanks,
+    			Anonymous.`
 
 			};
 
