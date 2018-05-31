@@ -12,12 +12,6 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.example.alexi.mongodb_app2.ChangePasswordDialog;
-import com.example.alexi.mongodb_app2.Response;
-import com.example.alexi.mongodb_app2.User;
-import com.example.alexi.mongodb_app2.NetworkUtil;
-import com.example.alexi.mongodb_app2.Constants;
-
 import java.io.IOException;
 
 import retrofit2.adapter.rxjava.HttpException;
@@ -34,6 +28,7 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
     private TextView mTvDate;
     private Button mBtChangePassword;
     private Button mBtLogout;
+    private Button mBtDelete;
 
     private ProgressBar mProgressbar;
 
@@ -60,10 +55,12 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
         mTvDate = (TextView) findViewById(R.id.tv_date);
         mBtChangePassword = (Button) findViewById(R.id.btn_change_password);
         mBtLogout = (Button) findViewById(R.id.btn_logout);
+        mBtDelete = (Button) findViewById(R.id.btn_delete);
         mProgressbar = (ProgressBar) findViewById(R.id.progress);
 
         mBtChangePassword.setOnClickListener(view -> showDialog());
         mBtLogout.setOnClickListener(view -> logout());
+        mBtDelete.setOnClickListener(view -> deleteAccount());
     }
 
     private void initSharedPreferences() {
@@ -92,6 +89,18 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
         fragment.setArguments(bundle);
 
         fragment.show(getFragmentManager(), ChangePasswordDialog.TAG);
+    }
+
+    private void deleteAccount(){
+
+        DeleteDialog fragment = new DeleteDialog();
+
+        Bundle bundle = new Bundle();
+        bundle.putString(Constants.NAME,mTvName.getText().toString());
+        bundle.putString(Constants.EMAIL,mEmail);
+        fragment.setArguments(bundle);
+
+        fragment.show(getFragmentManager(), DeleteDialog.TAG);
     }
 
     private void loadProfile() {

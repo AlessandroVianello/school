@@ -6,9 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.alexi.mongodb_app2.LoginFragment;
-import com.example.alexi.mongodb_app2.ResetPasswordDialog;
-
 public class MainActivity extends AppCompatActivity implements ResetPasswordDialog.Listener {
 
     public static final String TAG = MainActivity.class.getSimpleName();

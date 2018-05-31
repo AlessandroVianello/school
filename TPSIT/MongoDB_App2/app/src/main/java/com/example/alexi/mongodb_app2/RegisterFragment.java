@@ -16,11 +16,6 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.example.alexi.mongodb_app2.R;
-import com.example.alexi.mongodb_app2.Response;
-import com.example.alexi.mongodb_app2.User;
-import com.example.alexi.mongodb_app2.NetworkUtil;
-
 import java.io.IOException;
 
 import retrofit2.adapter.rxjava.HttpException;

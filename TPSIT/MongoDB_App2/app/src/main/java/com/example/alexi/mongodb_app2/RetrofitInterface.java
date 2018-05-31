@@ -1,9 +1,8 @@
 package com.example.alexi.mongodb_app2;
 
-import com.example.alexi.mongodb_app2.Response;
-import com.example.alexi.mongodb_app2.User;
 
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -29,4 +28,7 @@ public interface RetrofitInterface {
 
     @POST("users/{email}/password")
     Observable<Response> resetPasswordFinish(@Path("email") String email, @Body User user);
+
+    @DELETE("users/{email}/delete")
+    Observable<Response> deleteAccount(@Path("email")String email);
 }

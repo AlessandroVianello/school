@@ -7,6 +7,7 @@ const login = require('./functions/login');
 const profile = require('./functions/profile');
 const password = require('./functions/password');
 const config = require('./config/config.json');
+const xdelete = require('./functions/delete');
 
 module.exports = router => {
 
@@ -125,6 +126,15 @@ module.exports = router => {
 			.catch(err => res.status(err.status).json({ message: err.message }));
 		}
 	});
+
+	router.delete('/users/:id/delete',(req,res)=>{
+
+			xdelete.deleteProfile(req.params.id)
+
+			.then(result => res.status(result.status).json({ message: result.message }))
+
+			.catch(err => res.status(err.status).json({ message: err.message }));
+});
 
 	function checkToken(req) {
 

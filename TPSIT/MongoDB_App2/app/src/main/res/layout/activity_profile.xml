@@ -73,4 +73,13 @@
         android:paddingLeft="@dimen/button_padding"
         android:text="Logout" />
 
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_logout"
+        android:layout_marginTop="@dimen/button_margin"
+        android:paddingLeft="@dimen/button_padding"
+        android:text="Delete" />
+
 </RelativeLayout>

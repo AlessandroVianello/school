@@ -2,8 +2,6 @@ package com.example.alexi.mongodb_app2;
 
 import android.util.Base64;
 
-import com.example.alexi.mongodb_app2.Constants;
-
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import retrofit2.Retrofit;

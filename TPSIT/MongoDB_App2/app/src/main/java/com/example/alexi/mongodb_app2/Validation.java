@@ -1,7 +1,5 @@
 package com.example.alexi.mongodb_app2;
 
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.text.TextUtils;
 import android.util.Patterns;
 
