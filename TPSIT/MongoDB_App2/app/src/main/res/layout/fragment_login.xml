@@ -54,7 +54,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ti_password"
                 android:layout_marginTop="@dimen/button_margin"
-                android:paddingLeft="@dimen/button_padding"
                 android:text="Login" />
 
             <TextView
