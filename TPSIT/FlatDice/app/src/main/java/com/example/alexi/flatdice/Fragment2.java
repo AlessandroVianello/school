@@ -19,7 +19,7 @@ public class Fragment2 extends Fragment {
         int num;
         Random n=new Random();
 
-        num=n.nextInt(6)+1;
+        num=n.nextInt(20)+1;
 
         switch (num){
             case 1:
@@ -39,6 +39,48 @@ public class Fragment2 extends Fragment {
                 break;
             case 6:
                 view=inflater.inflate(R.layout.fragment_six, container, false);
+                break;
+            case 7:
+                view=inflater.inflate(R.layout.fragment_seven, container, false);
+                break;
+            case 8:
+                view=inflater.inflate(R.layout.fragment_eight, container, false);
+                break;
+            case 9:
+                view=inflater.inflate(R.layout.fragment_nine, container, false);
+                break;
+            case 10:
+                view=inflater.inflate(R.layout.fragment_ten, container, false);
+                break;
+            case 11:
+                view=inflater.inflate(R.layout.fragment_eleven, container, false);
+                break;
+            case 12:
+                view=inflater.inflate(R.layout.fragment_twelve, container, false);
+                break;
+            case 13:
+                view=inflater.inflate(R.layout.fragment_thirteen, container, false);
+                break;
+            case 14:
+                view=inflater.inflate(R.layout.fragment_fourteen, container, false);
+                break;
+            case 15:
+                view=inflater.inflate(R.layout.fragment_fifteen, container, false);
+                break;
+            case 16:
+                view=inflater.inflate(R.layout.fragment_sixteen, container, false);
+                break;
+            case 17:
+                view=inflater.inflate(R.layout.fragment_seventeen, container, false);
+                break;
+            case 18:
+                view=inflater.inflate(R.layout.fragment_eighteen, container, false);
+                break;
+            case 19:
+                view=inflater.inflate(R.layout.fragment_nineteen, container, false);
+                break;
+            case 20:
+                view=inflater.inflate(R.layout.fragment_twenty, container, false);
                 break;
         }
         // Inflate the layout for this fragment
