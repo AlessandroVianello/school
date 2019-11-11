@@ -6,7 +6,7 @@ public class Collection<T>{
     private int length;
 
     public Collection(){
-        this(10);
+        this(1);
     }
 
     public Collection(int initialSize){
@@ -24,6 +24,20 @@ public class Collection<T>{
         data[length++]=o;
         return this;
     }
+
+    public Collection daringAdd(T o){
+        try {
+            data[length++]=o;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            T[] newData = (T[])new Object[data.length*2];
+            for (int i=0 ; i<data.length; i++)
+                newData[i]=data[i];
+            data = newData;
+            daringAdd(o);
+        }
+        return this;
+    }
+
 
     public int size(){
         return length;
