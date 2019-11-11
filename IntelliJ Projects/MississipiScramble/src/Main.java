@@ -1,6 +1,6 @@
-public class main {
+public class Main {
     public static void main(String[] args) {
-        mississipiScramble x = new mississipiScramble();
+        MississippiScramble x = new MississippiScramble();
         System.out.println(x.str+"\t"+"lunghezza: "+x.str.length());
         System.out.println();
         x.scrambleI();

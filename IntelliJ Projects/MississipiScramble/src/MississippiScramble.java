@@ -1,9 +1,9 @@
-public class mississipiScramble {
+public class MississippiScramble {
 
     String str;
 
-    mississipiScramble(){
-        str="Mississipi";
+    MississippiScramble(){
+        str="Mississippi";
     }
 
     public void scrambleI(){

@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8886632e-d941-4804-9602-4a9979cbe621" name="Default Changelist" comment="" />
+    <list default="true" id="0033a783-4d0c-4ecd-93bb-c720b57fe3e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Collection/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Collection/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Collection/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Collection/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Collection/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Collection/out/production/Collection/exp/collection/Collection.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Collection/out/production/Collection/exp/collection/Collection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Collection/out/production/Collection/exp/collection/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Collection/out/production/Collection/exp/collection/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Comparisons/prova/comparisons/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Comparisons/prova/comparisons/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Comparisons/prova/comparisons/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Comparisons/prova/comparisons/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Comparisons/prova/comparisons/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Comparisons/prova/comparisons/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Comparisons/prova/comparisons/UsernameComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Comparisons/prova/comparisons/UsernameComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaW3school/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaW3school/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,21 +25,16 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1T9l5yoH0qCMM9rUwrr9SVRTVGV" />
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="prova.comparisons" />
-    </key>
+  <component name="ProjectId" id="1TTWbuAGVjurYDBcx5x0OQGJVN7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -64,12 +73,23 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8886632e-d941-4804-9602-4a9979cbe621" name="Default Changelist" comment="" />
-      <created>1572880012147</created>
+      <changelist id="0033a783-4d0c-4ecd-93bb-c720b57fe3e5" name="Default Changelist" comment="" />
+      <created>1573484640537</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1572880012147</updated>
+      <updated>1573484640537</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

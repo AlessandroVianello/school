@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8be70e11-82cb-4c70-a595-483cf29510f2" name="Default Changelist" comment="" />
+    <list default="true" id="a2218338-64ea-40bb-8f91-ad95490bf870" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Collection/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Comparisons/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../EsArrayList/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HollePrinter/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HollePrinter/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Collection/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Collection/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Collection/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Collection/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Collection/out/production/Collection/exp/collection/Collection.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Collection/out/production/Collection/exp/collection/Collection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Collection/out/production/Collection/exp/collection/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Collection/out/production/Collection/exp/collection/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Comparisons/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Comparisons/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Comparisons/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Comparisons/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Comparisons/out/production/Comparisons/prova/comparisons/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Comparisons/out/production/Comparisons/prova/comparisons/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Comparisons/out/production/Comparisons/prova/comparisons/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Comparisons/out/production/Comparisons/prova/comparisons/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Comparisons/out/production/Comparisons/prova/comparisons/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Comparisons/out/production/Comparisons/prova/comparisons/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Comparisons/out/production/Comparisons/prova/comparisons/UsernameComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Comparisons/out/production/Comparisons/prova/comparisons/UsernameComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EsArrayList/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EsArrayList/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EsArrayList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EsArrayList/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EsArrayList/out/production/EsArrayList/my/array/list/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../EsArrayList/out/production/EsArrayList/my/array/list/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EsArrayList/out/production/EsArrayList/my/array/list/MyCollection.class" beforeDir="false" afterPath="$PROJECT_DIR$/../EsArrayList/out/production/EsArrayList/my/array/list/MyCollection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EsArrayList/src/my/array/list/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../EsArrayList/src/my/array/list/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HollePrinter/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" afterPath="$PROJECT_DIR$/../HollePrinter/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HollePrinter/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HollePrinter/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HollePrinter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HollePrinter/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HollePrinter/out/production/HollePrinter/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HollePrinter/out/production/HollePrinter/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HollePrinter/out/production/HollePrinter/replace.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HollePrinter/out/production/HollePrinter/replace.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HollePrinter/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HollePrinter/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HollePrinter/src/replace.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HollePrinter/src/Replace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MississipiScramble/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MississipiScramble/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MississipiScramble/mississipiScramble.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mississipiScramble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MississippiScramble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaW3school/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaW3school/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,17 +49,17 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1RbPi3k3ZMoR9rFhB5LfY8eZHuT" />
+  <component name="ProjectId" id="1TTXDZzPrBek5nljy0aw0j6IURO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -35,8 +73,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="MississipiScramble" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -44,7 +82,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -53,12 +91,23 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8be70e11-82cb-4c70-a595-483cf29510f2" name="Default Changelist" comment="" />
-      <created>1569932945588</created>
+      <changelist id="a2218338-64ea-40bb-8f91-ad95490bf870" name="Default Changelist" comment="" />
+      <created>1573484939440</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1569932945588</updated>
+      <updated>1573484939440</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

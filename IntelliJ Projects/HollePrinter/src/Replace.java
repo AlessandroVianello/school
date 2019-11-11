@@ -1,9 +1,9 @@
 import java.util.*;
-public class replace {
+public class Replace {
     String str;
     char[] chr;
 
-    public replace(String str){
+    public Replace(String str){
         this.str=str;
         chr= new char[str.length()];
         chr= str.toCharArray();
