@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JavaW3school.iml" filepath="$PROJECT_DIR$/JavaW3school.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EsArray/EsArray.iml" filepath="$PROJECT_DIR$/EsArray/EsArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Methods/Methods.iml" filepath="$PROJECT_DIR$/Methods/Methods.iml" />
     </modules>
   </component>
 </project>
