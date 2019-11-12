@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35f2fee2-d81e-46ff-be20-fff61d369078" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Exceptions/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exceptions/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exceptions/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exceptions/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exceptions/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exceptions/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exceptions/Exceptions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exceptions/file.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exceptions/src/example/exceptions/Exceptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Collection/exp/collection/Collection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Collection/exp/collection/Collection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Collection/exp/collection/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Collection/exp/collection/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exp/collection/Collection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exp/collection/Collection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exp/collection/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exp/collection/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaW3school/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaW3school/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="35f2fee2-d81e-46ff-be20-fff61d369078" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +12,11 @@
     <option name="done" value="true" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="AlessandroVianello &lt;alex.ilre33@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
@@ -95,5 +84,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated Collection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Collection" />
   </component>
 </project>
