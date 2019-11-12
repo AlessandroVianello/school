@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ce3c66c-2629-47fe-b9f9-682cfcef9e84" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../IntelliJ Projects/Collection/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IntelliJ Projects/Collection/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Methods/ES15/es/fifteen/method/DisplayTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/ES15/es/fifteen/method/DisplayTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/ES15/es/fifteen/method/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/ES15/es/fifteen/method/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573486171843</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update ES15">
+      <created>1573570594696</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573570594696</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,30 +135,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update JavaW3School" />
     <MESSAGE value="Add ES15" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ES15" />
+    <MESSAGE value="Update ES15" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update ES15" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Methods/ES15/es/fifteen/method/DisplayTime.java</url>
-          <line>67</line>
+          <line>66</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Methods/ES15/es/fifteen/method/DisplayTime.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Methods/ES15/es/fifteen/method/DisplayTime.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Methods/ES15/es/fifteen/method/DisplayTime.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
