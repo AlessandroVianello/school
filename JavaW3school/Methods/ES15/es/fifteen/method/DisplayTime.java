@@ -35,14 +35,10 @@ class DisplayTime {
     private boolean isLeap(){
         boolean leap;
         if(year % 4 == 0)
-        {
-            if( year % 100 == 0)
-            {
+            if (year % 100 == 0)
                 leap = year % 400 == 0;
-            }
             else
                 leap = true;
-        }
         else
             leap = false;
 
