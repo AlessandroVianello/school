@@ -47,9 +47,8 @@ class DisplayTime {
 
     private String getDay(){
         String dayOfWeek;
-        if(isLeap() && (month==1 || month==2)){
-            dayOfWeek=days[((getYearCode()+monthCode[month-1]+centuryCode+day-1)%7)];
-        }
+        if(isLeap() && (month==1 || month==2))
+            dayOfWeek = days[((getYearCode() + monthCode[month - 1] + centuryCode + day - 1) % 7)];
         else
             dayOfWeek=days[((getYearCode()+monthCode[month-1]+centuryCode+day)%7)];
         return dayOfWeek;
