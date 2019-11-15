@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ce3c66c-2629-47fe-b9f9-682cfcef9e84" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../IntelliJ Projects/tris/out/production/tris/tris.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Collection/Collection.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Collection/ES1/es/one/collection/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Collection/ES7/es/seven/collection/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,6 +42,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Collection" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -50,13 +56,52 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main (4)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="es.fifteen.method.Main" />
       <module name="Methods" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="es.fifteen.method.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.one.collection.Main" />
+      <module name="Collection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.one.collection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.seven.collection.Main" />
+      <module name="Collection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.seven.collection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.six.method.Main" />
+      <module name="Methods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.six.method.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,6 +124,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (4)" />
+        <item itemvalue="Application.Main (3)" />
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
