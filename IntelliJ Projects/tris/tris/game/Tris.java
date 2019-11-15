@@ -1,7 +1,6 @@
-package tris;
+package tris.game;
 
 import javax.swing.JFrame;
-import static tris.TrisGame.Symbols.*;
 
 public class Tris{
         

@@ -1,4 +1,4 @@
-package tris;
+package tris.game;
 
 public interface TrisDisplayListener {
 

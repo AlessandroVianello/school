@@ -1,7 +1,7 @@
-package tris;
+package tris.game;
 
-import tris.TrisGame.Symbols;
-import static tris.TrisGame.Symbols.*;
+import tris.game.TrisGame.Symbols;
+import static tris.game.TrisGame.Symbols.*;
 
 public class Configuration {
 

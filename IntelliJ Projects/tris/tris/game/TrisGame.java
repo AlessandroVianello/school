@@ -1,7 +1,7 @@
-package tris;
+package tris.game;
 
 import javax.swing.JOptionPane;
-import static tris.TrisGame.Symbols.*;
+import static tris.game.TrisGame.Symbols.*;
 
 public class TrisGame implements TrisDisplayListener {
 

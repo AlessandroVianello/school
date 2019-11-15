@@ -1,4 +1,4 @@
-package tris;
+package tris.game;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -9,7 +9,7 @@ import java.awt.event.MouseEvent;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import javax.swing.JComponent;
-import static tris.TrisGame.Symbols.*;
+import static tris.game.TrisGame.Symbols.*;
 
 public class TrisDisplayComponent extends JComponent{
 
