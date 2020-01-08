@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ce3c66c-2629-47fe-b9f9-682cfcef9e84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ConditionalStatement/ConditionalStatement.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConditionalStatement/ES1/es/one/state/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConditionalStatement/ES1/es/one/state/PosOrNeg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConditionalStatement/ES3/es/three/state/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConditionalStatement/ES3/es/three/state/SearchMax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="5ce3c66c-2629-47fe-b9f9-682cfcef9e84" name="Default Changelist" comment="Updated JavaW3School">
+      <change afterPath="$PROJECT_DIR$/ConditionalStatement/ES5/es/five/state/FindWeek.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConditionalStatement/ES5/es/five/state/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConditionalStatement/ConditionalStatement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ConditionalStatement/ConditionalStatement.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +51,7 @@
       <recent name="C:\Users\pronto all'uso\Desktop\school\JavaW3school\" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="es.fifteen.method.Main" />
       <module name="Methods" />
@@ -68,12 +65,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="es.seven.collection.Main" />
-      <module name="Collection" />
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.five.state.Main" />
+      <module name="ConditionalStatement" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="es.seven.collection.*" />
+          <option name="PATTERN" value="es.five.state.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (5)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main (4)" />
-        <item itemvalue="Application.Main (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573832072988</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Updated JavaW3School">
+      <created>1578480822270</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1578480822271</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,22 +234,30 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="363" y="112" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.768@0.0.1366.768" timestamp="1578476464710" />
-    <state width="1322" height="192" key="GridCell.Tab.0.bottom" timestamp="1578480763756">
+    <state x="231" y="0" key="CommitChangelistDialog2" timestamp="1578482025959">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1578480763756" />
-    <state width="1322" height="192" key="GridCell.Tab.0.center" timestamp="1578480763756">
+    <state x="231" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1578482025959" />
+    <state width="1322" height="192" key="GridCell.Tab.0.bottom" timestamp="1578482054212">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1578480763756" />
-    <state width="1322" height="192" key="GridCell.Tab.0.left" timestamp="1578480763756">
+    <state width="1322" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1578482054212" />
+    <state width="1322" height="192" key="GridCell.Tab.0.center" timestamp="1578482054212">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1578480763756" />
-    <state width="1322" height="192" key="GridCell.Tab.0.right" timestamp="1578480763756">
+    <state width="1322" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1578482054212" />
+    <state width="1322" height="192" key="GridCell.Tab.0.left" timestamp="1578482054212">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1578480763756" />
+    <state width="1322" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1578482054212" />
+    <state width="1322" height="192" key="GridCell.Tab.0.right" timestamp="1578482054212">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1578482054212" />
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2" timestamp="1578480827669">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1578480827669" />
     <state x="65" y="5" key="new project wizard" timestamp="1578479202747">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
