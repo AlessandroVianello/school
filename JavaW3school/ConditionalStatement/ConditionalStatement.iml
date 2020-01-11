@@ -6,8 +6,18 @@
       <sourceFolder url="file://$MODULE_DIR$/ES1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ES3" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ES5" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ES8" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
