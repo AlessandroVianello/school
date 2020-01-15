@@ -7,6 +7,8 @@
       <sourceFolder url="file://$MODULE_DIR$/ES3" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ES5" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ES8" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ES9" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ES12" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
