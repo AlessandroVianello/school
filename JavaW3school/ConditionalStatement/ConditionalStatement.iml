@@ -10,6 +10,9 @@
       <sourceFolder url="file://$MODULE_DIR$/ES9" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ES12" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ES13" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ES14" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ES15" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ES16" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
