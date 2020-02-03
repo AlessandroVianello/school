@@ -16,8 +16,8 @@ public class Es1 {
     public static class Dog extends Animal{
         private String color;
 
-        public Dog(int w, String c) {
-            super(w);
+        public Dog(int weight, String c) {
+            super(weight);
             color=c;
         }
         @Override
