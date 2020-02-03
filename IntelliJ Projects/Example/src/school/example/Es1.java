@@ -22,14 +22,40 @@ public class Es1 {
         }
         @Override
         public void eat(Animal a){
-            weight += a.weight;
+            weight += a.weight/2;
         }
+
+        public void bark(){
+            System.out.println("woof");
+        }
+
+    }
+
+    public static class Cat extends Animal{
+        private String color;
+
+        public Cat(int weight, String color) {
+            super(weight);
+            this.color=color;
+        }
+
+        @Override
+        public void eat(Animal a){
+            weight += a.weight/3;
+            color = color + " fat";
+        }
+
+        public void meow(){
+            System.out.println("meow");
+        }
+
     }
 
     public static void main(String[] args) {
         Dog fido = new Dog(15, "Bruno");
         Dog baldo = new Dog(15, "Bianco");
-        Animal Jackie = new Dog(5, "Nero");
+        Animal jackie = new Dog(5, "Nero");
+        Cat selena = new Cat(4, "Grigio");
     }
 
 }
