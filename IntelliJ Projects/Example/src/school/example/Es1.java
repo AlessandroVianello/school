@@ -56,6 +56,9 @@ public class Es1 {
         Dog baldo = new Dog(15, "Bianco");
         Animal jackie = new Dog(5, "Nero");
         Cat selena = new Cat(4, "Grigio");
+
+        selena.eat(fido);
+
     }
 
 }
