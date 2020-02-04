@@ -51,6 +51,18 @@ public class Es1 {
 
     }
 
+    public static class Persian extends Cat {
+
+        public Persian(int weight) {
+            super(weight, "Beige");
+        }
+
+        @Override
+        public void meow(){
+            System.out.println("maoooooo");
+        }
+    }
+
     public static void main(String[] args) {
         Dog fido = new Dog(15, "Bruno");
         Dog baldo = new Dog(15, "Bianco");
@@ -58,6 +70,9 @@ public class Es1 {
         Cat selena = new Cat(4, "Grigio");
 
         selena.eat(fido);
+
+        Animal a = new Persian(10);
+
 
     }
 
