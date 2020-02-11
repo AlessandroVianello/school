@@ -51,6 +51,10 @@ public class MyList <T>{
         int y = (Integer)o;
         System.out.println(y);
 
+        MyList <String> l2 = new MyList<>();
+        l2.add("ciao");
+        l2.add("hello");
+
     }
 
 }
